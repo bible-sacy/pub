@@ -6,4 +6,4 @@ python -m pagelabels --delete pngs.pdf
 python -m pagelabels --startpage 1 --type 'roman lowercase' pngs.pdf
 python -m pagelabels --startpage 7 --firstpagenum 1 pngs.pdf
 ../pdfoutline.py pngs.pdf pdf.toc NT_6_Corinthiens.pdf
-exiftool -overwrite_original -Title="[NT 6] Épîtres de St Paul aux Corinthiens" -Author="Le Maistre de Sacy" -Subject="$(tr '\n' ' ' <info.txt)" NT_6_Corinthiens.pdf
+exiftool -overwrite_original -Creator='https://bible.sacy.be/pub/' -Title="[NT 6] Épîtres de St Paul aux Corinthiens" -Author="Le Maistre de Sacy" -Subject="$(tr '\n' ' ' <info.txt)" NT_6_Corinthiens.pdf

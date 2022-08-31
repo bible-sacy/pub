@@ -5,4 +5,4 @@ python -m pagelabels --delete pngs.pdf
 python -m pagelabels --startpage 1 --type 'roman lowercase' pngs.pdf
 python -m pagelabels --startpage 41 --firstpagenum 1 pngs.pdf
 ../pdfoutline.py pngs.pdf pdf.toc NT_4_Actes.pdf
-exiftool -overwrite_original -Title="[NT 4] Actes des Apôtres" -Author="Le Maistre de Sacy" -Subject="$(tr '\n' ' ' <info.txt)" NT_4_Actes.pdf
+exiftool -overwrite_original -Creator='https://bible.sacy.be/pub/' -Title="[NT 4] Actes des Apôtres" -Author="Le Maistre de Sacy" -Subject="$(tr '\n' ' ' <info.txt)" NT_4_Actes.pdf

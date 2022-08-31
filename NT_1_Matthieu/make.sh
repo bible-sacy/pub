@@ -7,4 +7,4 @@ python -m pagelabels --startpage 7 --type 'letters uppercase' pngs.pdf
 python -m pagelabels --startpage 9 --firstpagenum 7 --type 'roman lowercase' pngs.pdf
 python -m pagelabels --startpage 25 --firstpagenum 1 --type arabic pngs.pdf
 ../pdfoutline.py pngs.pdf pdf.toc NT_1_Matthieu.pdf
-exiftool -overwrite_original -Title="[NT 1] Évangile selon St Matthieu" -Author="Le Maistre de Sacy" -Subject="$(tr '\n' ' ' <info.txt)" NT_1_Matthieu.pdf
+exiftool -overwrite_original -Creator='https://bible.sacy.be/pub/' -Title="[NT 1] Évangile selon St Matthieu" -Author="Le Maistre de Sacy" -Subject="$(tr '\n' ' ' <info.txt)" NT_1_Matthieu.pdf
