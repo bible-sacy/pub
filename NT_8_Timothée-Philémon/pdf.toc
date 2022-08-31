@@ -1,0 +1,25 @@
+Titre 1
+Avis sur les épîtres 3
+I. épître à Timothée 12
+    Avis 12
+    + 14
+    I 1
+    II 23
+    III 45
+    IV 79
+    V 102
+    VI 137
+II. épître à Timothée 171
+    Avis 171
+    I 173
+    II 198
+    III 236
+    IV 259
+Épître à Tite 282
+    Avis 282
+    I 285
+    II 305
+    III 322
+Épître à Philémon 342
+    Avis 342
+    I 345
