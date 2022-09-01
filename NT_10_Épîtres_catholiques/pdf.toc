@@ -1,0 +1,43 @@
+Titre 1
+Préface des épîtres catholiques 3
+Épître de St Jacques 15
+    Argument 15
+    +24
+    I 1
+    II 53
+    III 80
+    IV 102
+    V 124
+I. épître de St Pierre 153
+    Argument 153
+    I 159
+    II 188
+    III 225
+    IV 251
+    V 279
+II. épître de St Pierre 303
+    Argument 303
+    I 308
+    II 335
+    III 364
+I. épître de St Jean 385
+    Argument 385
+    I 393
+    II 408
+    III 448
+    IV 480
+    V 508
+II. épître de St Jean 537
+    Argument 537
+    I 539
+III. épître de St Jean 553
+    Argument 553
+    I 555
+Épître de Saint Jude 565
+    Argument 565
+    I 576
+Table des matières 611
+Table des épîtres et évangiles 625
+Extrait du privilège 635
+Fautes 636
+Note sur la présente édition 637
