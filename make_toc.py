@@ -26,8 +26,6 @@ def main():
     for [livre, page] in data['chapters']:
         if isinstance(livre, int):
             livre = int_to_roman(livre)
-        elif isinstance(livre, str):
-            livre = livre.capitalize()
         print(livre, page)
 
 if __name__ == '__main__':
