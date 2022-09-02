@@ -6,4 +6,4 @@ python -m pagelabels --delete pngs.pdf
 python -m pagelabels --startpage 1 --type 'roman lowercase' pngs.pdf
 python -m pagelabels --startpage 17 --firstpagenum 1 pngs.pdf
 ../pdfoutline.py pngs.pdf pdf.toc NT_8_Timothée-Philémon.pdf
-exiftool -overwrite_original -Title="[NT 8] Épîtres de St Paul à Timothée, Tite & Philémon" -Author="Le Maistre de Sacy" -Subject="$(tr '\n' ' ' <info.txt)" -Creator='https://bible.sacy.be/pub/' NT_8_Timothée-Philémon.pdf
+exiftool -overwrite_original -Producer='https://bible.sacy.be/pub/' -Author="Le Maistre de Sacy" -Creator="Le Maistre de Sacy" -Title="[NT 8] Épîtres de St Paul à Timothée, Tite & Philémon" NT_8_Timothée-Philémon.pdf

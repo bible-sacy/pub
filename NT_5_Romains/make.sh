@@ -6,4 +6,4 @@ python -m pagelabels --delete pngs.pdf
 python -m pagelabels --startpage 1 pngs.pdf
 python -m pagelabels --startpage 481 --firstpagenum 843 pngs.pdf
 ../pdfoutline.py pngs.pdf pdf.toc NT_5_Romains.pdf
-exiftool -overwrite_original -Creator='https://bible.sacy.be/pub/' -Title="[NT 5] Épître de St Paul aux Romains" -Author="Le Maistre de Sacy" -Subject="$(tr '\n' ' ' <info.txt)" NT_5_Romains.pdf
+exiftool -overwrite_original -Producer='https://bible.sacy.be/pub/' -Author="Le Maistre de Sacy" -Creator="Le Maistre de Sacy" -Title="[NT 5] Épître de St Paul aux Romains" NT_5_Romains.pdf

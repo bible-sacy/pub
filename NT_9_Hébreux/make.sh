@@ -6,4 +6,4 @@ python -m pagelabels --delete pngs.pdf
 python -m pagelabels --startpage 1 --type 'roman lowercase' pngs.pdf
 python -m pagelabels --startpage 3 --firstpagenum 405 pngs.pdf
 ../pdfoutline.py pngs.pdf pdf.toc NT_9_Hébreux.pdf
-exiftool -overwrite_original -Title="[NT 9] Épître de St Paul aux Hébreux" -Author="Le Maistre de Sacy" -Subject="$(tr '\n' ' ' <info.txt)" -Creator='https://bible.sacy.be/pub/' NT_9_Hébreux.pdf
+exiftool -overwrite_original -Producer='https://bible.sacy.be/pub/' -Author="Le Maistre de Sacy" -Creator="Le Maistre de Sacy" -Title="[NT 9] Épître de St Paul aux Hébreux" NT_9_Hébreux.pdf

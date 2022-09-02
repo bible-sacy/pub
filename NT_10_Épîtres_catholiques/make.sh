@@ -6,4 +6,4 @@ python -m pagelabels --delete pngs.pdf
 python -m pagelabels --startpage 1 --type 'roman lowercase' pngs.pdf
 python -m pagelabels --startpage 25 --firstpagenum 1 pngs.pdf
 ../pdfoutline.py pngs.pdf pdf.toc NT_10_Épîtres_catholiques.pdf
-exiftool -overwrite_original -Title="[NT 10] Épîtres catholiques" -Author="Le Maistre de Sacy" -Subject="$(tr '\n' ' ' <info.txt)" -Creator='https://bible.sacy.be/pub/' NT_10_Épîtres_catholiques.pdf
+exiftool -overwrite_original -Producer='https://bible.sacy.be/pub/' -Author="Le Maistre de Sacy" -Creator="Le Maistre de Sacy" -Title="[NT 10] Épîtres catholiques" NT_10_Épîtres_catholiques.pdf

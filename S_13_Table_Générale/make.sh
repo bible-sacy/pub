@@ -5,4 +5,4 @@ img2pdf $PAGES info.png -o pngs.pdf
 python -m pagelabels --delete pngs.pdf
 python -m pagelabels --startpage 1 --firstpagenum 163 pngs.pdf
 ../pdfoutline.py pngs.pdf pdf.toc S_13_Table_Générale.pdf
-exiftool -overwrite_original -Title="[S 13] Table générale des matières de la Sainte Bible" -Author="Port-Royal" -Subject="$(tr '\n' ' ' <info.txt)" -Creator='https://bible.sacy.be/pub/' S_13_Table_Générale.pdf
+exiftool -overwrite_original -Producer='https://bible.sacy.be/pub/' -Author="Port-Royal" -Creator="Port-Royal" -Title="[S 13] Table générale des matières de la Sainte Bible" S_13_Table_Générale.pdf
