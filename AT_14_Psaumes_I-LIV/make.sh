@@ -1,7 +1,6 @@
 PAGES=$(echo ../../pngs-at/1711_desprez_pseaumes_t1/1711_desprez_pseaumes_t1-{6..772}.png)
 exiftool -overwrite_original -all= $PAGES
-soffice --convert-to png info.txt
-optipng info.png
+../txt2png.sh info.txt info.png
 img2pdf $PAGES info.png -o pngs.pdf
 python -m pagelabels --delete pngs.pdf
 python -m pagelabels --startpage 1 --type 'roman lowercase' pngs.pdf

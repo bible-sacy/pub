@@ -1,6 +1,6 @@
 PAGES=$(echo ../../pngs-nt-1-trimmed/trimmed-romains_corinthiens_1_new/trimmed-romains_corinthiens_1_new-{6..37}.png ../../pngs-nt-1-trimmed/trimmed-romains_corinthiens_1/trimmed-romains_corinthiens_1-{38..485}.png ../../pngs-nt-1-trimmed/trimmed-romains_corinthiens_1/trimmed-romains_corinthiens_1-{846..847}.png)
 exiftool -overwrite_original -all= $PAGES
-soffice --convert-to png info.txt
+../txt2png.sh info.txt info.png
 img2pdf $PAGES info.png -o pngs.pdf
 python -m pagelabels --delete pngs.pdf
 python -m pagelabels --startpage 1 pngs.pdf

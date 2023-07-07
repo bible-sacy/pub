@@ -1,14 +1,22 @@
 #!/usr/bin/env python
 
-# From https://github.com/yutayamamoto/pdfoutline.git
-
+# From https://github.com/yutayamamoto/pdfoutline.git with a fix
+# of the /Title encoding ("FEFF" + utf-16-be instead of utf-16).
+# (In https://opensource.adobe.com/dc-acrobat-sdk-docs/acrobatsdk/pdfs/acrobatsdk_pdfmark.pdf :
+# "If Unicode, the string must begin with <FEFF>. For example, the
+# "Unicode string for (ABC) is <FEFF004100420043>. Title has a
+# "maximum length of 255 PDFDocEncoding characters or 126 Unicode
+# "values, although a practical limit of 32 characters is advised so that it
+# "can be read easily in the Acrobat viewer"
+#
 # MIT License
-
+#
+# Copyright (c) 2023 Louis-Guillaume Dubois
 # Copyright (c) 2020 Yuta Yamamoto
-
+#
 # The above copyright notice and this permission notice shall be included in all
 # copies or substantial portions of the Software.
-
+#
 # THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 # IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
 # FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
@@ -16,10 +24,10 @@
 # LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
-
+#
 # Adobe pdfMark Reference
 # https://opensource.adobe.com/dc-acrobat-sdk-docs/acrobatsdk/pdfs/acrobatsdk_pdfmark.pdf
-
+#
 # in toc file, you must close the parenthesis()!! otherwise, gs fails.
 
 
@@ -122,7 +130,7 @@ def elist_to_gs(elist):
         gs_list = []
         for entry in elist:
             gs_list.append("[/Page %d /View [/XYZ null null null] /Title <%s> /Count %d /OUT pdfmark" \
-                    % (entry.page, entry.name.encode("utf-16").hex(), len(entry.children)))
+                    % (entry.page, "FEFF" + entry.name.encode("utf-16-be").hex(), len(entry.children)))
             gs_list += rec_elist_to_gslist(entry.children)
         return gs_list
 

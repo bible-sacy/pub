@@ -1,5 +1,5 @@
 exiftool -overwrite_original -all= ../../pngs-nt-1-trimmed/trimmed-jean/trimmed-jean-{6..599}.png
-soffice --convert-to png info.txt
+../txt2png.sh info.txt info.png
 img2pdf ../../pngs-nt-1-trimmed/trimmed-jean/trimmed-jean-{6..599}.png info.png -o pngs.pdf
 python -m pagelabels --delete pngs.pdf
 python -m pagelabels --startpage 1 pngs.pdf

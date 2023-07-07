@@ -1,5 +1,5 @@
 exiftool -overwrite_original -all= ../../pngs-nt-1-trimmed/trimmed-matthieu_1/trimmed-matthieu_1-{6..812}.png
-soffice --convert-to png info.txt
+../txt2png.sh info.txt info.png
 img2pdf ../../pngs-nt-1-trimmed/trimmed-matthieu_1/trimmed-matthieu_1-{6..812}.png info.png -o pngs.pdf
 python -m pagelabels --delete pngs.pdf
 python -m pagelabels --startpage 1 --type 'roman lowercase' pngs.pdf
